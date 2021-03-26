@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const authConfig = require('../../config/auth');
 const router = express.Router();
 const crypto = require('crypto');
-const mailer = require('../../modules/mailer')
+const mailer = require('../../modules/mailer');
 
 function generateToken(params = {}) {
   return jwt.sign(params, authConfig.secret, {
